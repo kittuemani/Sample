@@ -1,0 +1,43 @@
+<div [class.dark-theme]="isDarkTheme">
+<md-toolbar color="primary">
+    <span><md-icon class="icon-20">pets</md-icon> {{name}}</span>
+
+   <button md-icon-button [md-menu-trigger-for]="menu">
+   <md-icon>more_vert</md-icon>
+</button>
+</md-toolbar>
+<!-- menu opens when trigger button is clicked -->
+
+
+<md-menu #menu="mdMenu" x-position="before">
+    <button md-menu-item (click)="isDarkTheme=!isDarkTheme"> Toggle Theme </button>
+    <button md-menu-item> Settings </button>
+    <button md-menu-item> Help </button>
+    <button md-menu-item disabled> Sign Out </button>
+</md-menu>
+ <md-sidenav-layout>
+
+       <md-tab-group>
+           <md-tab>
+               <template md-tab-label>Movie List</template>
+                    <app-directory></app-directory>
+
+                        </md-tab>
+           <md-tab>
+               <template md-tab-label>Card Game</template>
+                    <app-card></app-card>
+           </md-tab>
+       </md-tab-group>
+
+
+ </md-sidenav-layout>
+
+
+<br>
+
+<section id="main">
+
+
+
+</section>
+    </div>

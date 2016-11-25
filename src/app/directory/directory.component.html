@@ -1,0 +1,26 @@
+
+<md-grid-list cols="3"  md-row-height="16:9" md-gutter="2em">
+      <md-grid-tile *ngFor="let planet of res.results" >
+        <!--<div><h3 md-line>{{planet.title}}</h3></div>-->
+          <div>
+          <!--<img class="poster lazyautosizes lazyloaded" data-sizes="auto"
+          data-src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{planet.poster_path}}"
+          data-srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{planet.poster_path}} 1x, https://image.tmdb.org/t/p/w600_and_h900_bestv2{{planet.poster_path}} 2x"
+          alt="{{planet.title}}"
+           srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{planet.poster_path}} 1x, https://image.tmdb.org/t/p/w600_and_h900_bestv2{{planet.poster_path}} 2x"
+           src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{planet.poster_path}}">-->
+           <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{planet.poster_path}}" alt="{{planet.title}}" width="300px" />
+           <md-grid-tile-footer>
+             <h3 md-line> {{planet.title}}</h3>
+             <span md-line>  {{planet.title}}</span>
+          
+             <button md-icon-button (click)="showInfo(planet)">
+               <md-icon>info</md-icon>
+             </button>
+           </md-grid-tile-footer>
+         </div>
+
+
+      </md-grid-tile>
+</md-grid-list>
+<ng-content></ng-content>
